@@ -11,13 +11,14 @@ public class Main {
 
         EspacioCampus laboratorioLinux = new EspacioCampus(101, 30, List.of("Proyector", "PCs Arch Linux"), false);
 
-        // Profiles (Users mdfk)
+        // Profiles (Users)
         AgendaAcademica agendaDocente = new AgendaAcademica(5001);
         AgendaAcademica agendaEstudiante1 = new AgendaAcademica(202601);
         AgendaAcademica agendaEstudiante2 = new AgendaAcademica(202602);
 
         // Orchestrations
-        // Se intenta crear una reserva uniendo al docente, a los estudiantes y la sala
+
+        // Lista con estudiantes, docente y sala
         List<Integer> grupoEstudiantes = List.of(agendaEstudiante1.getIdPropietario(), agendaEstudiante2.getIdPropietario());
         ReservaAsesoria nuevaReserva = new ReservaAsesoria(agendaDocente.getIdPropietario(), grupoEstudiantes, laboratorioLinux);
 

@@ -3,6 +3,7 @@ package com.universidad.sync.domain.entities;
 import lombok.Getter;
 import lombok.Setter;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -20,14 +21,19 @@ public class AgendaAcademica {
         this.ultimaActualizacion = new Date();
     }
 
-    public void agregarClase(String bloqueTiempo) {
-        this.bloquesOcupados.add(bloqueTiempo);
+    public void agregarClase(String bloqueUsado) {
+        this.bloquesOcupados.add(bloqueUsado);
         this.ultimaActualizacion = new Date();
     }
 
-    public List<String> obtenerTiempoLibre() {
-        // Lógica simulada: retornaría los bloques de 8am a 8pm que no estén en la lista
-        return new ArrayList<>();
+public List<String> obtenerTiempoLibre() {
+        List<String> todosLosBloques = new ArrayList<>(Arrays.asList(
+            "08:00", "09:00", "10:00", "11:00", "12:00", "13:00",
+            "14:00", "15:00", "16:00", "17:00", "18:00", "19:00"
+        ));
+        todosLosBloques.removeAll(this.bloquesOcupados);
+
+        return todosLosBloques;
     }
 
     public void liberarBloque(String bloqueTiempo) {
