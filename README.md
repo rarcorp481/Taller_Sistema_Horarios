@@ -20,7 +20,7 @@ Para ejecutarlo posicionate en la clase `Main.java` en la ruta `src/main/java/co
 
 
 
----
+
 ## Problema a Resolver: Sistema de Sincronización de Horarios Universitarios
 
 
@@ -30,7 +30,8 @@ En el entorno universitario, coordinar un espacio libre entre docentes y grupos 
 ### Problema: 
 Se requiere un sistema centralizado que cruce automáticamente las afendas de múltiples usuarios, encuentre "huecos" libres en común de forma sincronizada y permita reservar espacios físicos dentro del campus sin generar conflictos de concurrencia.
 
----
+
+
 ## Diseño del proyecto:
 
 ### Árbol de directorios:
@@ -88,7 +89,9 @@ public interface ISesionSincronizada extends IProgramable, INotificable{
     void confirmarMatchDeHorarios();
 }
 ```
----
+
+
+
 ## Definición de las 3 clases principales:
 
 Estas clases están diseñadas respetando el **Principio de Responsabilidad Única (SRP)**.
@@ -150,7 +153,9 @@ Esta es la clase orquestadora. Une el tiempo libre encontrado en las agendas con
 4. **Propio:**
    - **exportarDetalleMarkdown():** Genera un resumen en texto plano estructurado con los detalles de la reunión.
 
----
+
+
+
 ## Relación entre las clases (Diagrama): 
 
 Para visualizar el diagrama de manera óptima, entra a este enlace de google drive (desde cualquier cuenta): [link](https://drive.google.com/file/d/1gSkYoHB7TKeLz2jNc7P9ge0XiLxfNAJL/view?usp=sharing)
