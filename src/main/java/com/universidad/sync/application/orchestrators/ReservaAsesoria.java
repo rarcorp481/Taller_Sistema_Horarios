@@ -5,10 +5,13 @@ import com.universidad.sync.domain.entities.EspacioCampus;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
 import java.util.List;
 
 @Getter
 @Setter
+@ToString
 public class ReservaAsesoria implements ISesionSincronizada {
 
     private static Integer generadorId = 1;

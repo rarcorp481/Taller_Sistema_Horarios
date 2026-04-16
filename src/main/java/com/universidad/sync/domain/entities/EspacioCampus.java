@@ -3,11 +3,14 @@ package com.universidad.sync.domain.entities;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
+
 import java.util.List;
 
 @Getter
 @Setter
 @AllArgsConstructor
+@ToString
 public class EspacioCampus {
 
     private Integer idEspacio;
